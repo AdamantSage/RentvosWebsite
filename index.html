@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentvos</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+    <div class="navbar">
+        <img src="assets/images/logo.jpg" alt="Company Logo" class="logo">
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        
+        <div class="hamburger" id="hamburger">
+            &#9776; <!-- Hamburger symbol -->
+        </div>
+
+        <!-- Dropdown menu (hidden by default) -->
+        <div class="dropdown-menu" id="dropdown-menu">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</header>
+
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <h1 class="slide-in">Welcome to Rentvos</h1>
+        <p>If you need your palletjack fixed or trolley maintained, we are here for you.</p>
+        <a href="#products" class="cta-button">What we fix?</a>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products slide-in">
+        <h2>Featured Products</h2>
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="product-item">
+                    <img src="assets/images/image1.jpeg" alt="Product 1">
+                    <p>Pallet Jack Repairs, maintenance, and service</p>
+                </div>
+                <div class="product-item">
+                    <img src="assets/images/image2.jpeg" alt="Product 2">
+                    <p>Amazing product description goes here.</p>
+                </div>
+                <div class="product-item">
+                    <img src="assets/images/image3.jpeg" alt="Product 3">
+                    <p>Amazing product description goes here.</p>
+                </div>
+                <div class="product-item">
+                    <img src="assets/images/image4.jpeg" alt="Product 4">
+                    <p>Amazing product description goes here.</p>
+                </div>
+                <div class="product-item">
+                    <img src="assets/images/image5.jpeg" alt="Product 5">
+                    <p>Amazing product description goes here.</p>
+                </div>
+                <div class="product-item">
+                    <img src="assets/images/image7.jpeg" alt="Product 6">
+                    <p>Amazing product description goes here.</p>
+                </div>
+            </div>
+            <!-- Navigation buttons -->
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        <!-- Request Service Button after the carousel -->
+        <button class="cta-button" onclick="window.location.href='#contact'">Request our service</button>
+    </section>
+    
+    
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We are passionate about bringing the best products to our customers. Learn more about our mission and vision.</p>
+        <div class="trading-hours">
+            <h3>Our Trading Hours:</h3>
+            <ul>
+                <li><strong>Monday to Friday:</strong> 08h00 - 16h00</li>
+                <li><strong>Saturday & Sunday:</strong> Closed</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm" action="https://formsubmit.co/michaelmathebula009@gmail.com" method="POST">
+            <ul class="contact-list">
+                <li>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Name and Surname" required>
+                </li>
+                <li>
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" name="company" placeholder="Company (Optional)">
+                </li>
+                <li>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
+                </li>
+                <li>
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="Mobile number" pattern="[0-9]{10}" title="Enter a valid 10-digit mobile number" required>
+                </li>
+                <li>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="What would you like to say?" required></textarea>
+                </li>
+                <li>
+                    <button type="submit">Send Message</button>
+                </li>
+            </ul>
+        </form>
+        <div id="loadingMessage" style="display: none;">Sending...</div> <!-- Loading Message -->
+        <div id="successMessage" style="display: none;">Thank you for contacting us!</div> <!-- Success Message -->
+
+        <div class="whatsapp-contact">
+            
+            <a href="https://wa.me/0622173462" target="_blank" rel="noopener">
+                <img decoding="async" src="assets/images/Whats-App.png" alt="WhatsApp" class="whatsapp-icon">
+            </a>
+        </div>
+    </section>
+
+    
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Rentvos | All Rights Reserved</p>
+    </footer>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

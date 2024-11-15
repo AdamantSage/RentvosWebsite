@@ -1,0 +1,451 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif; /* Applied Poppins font */
+    line-height: 1.6;
+    background-color: #f4f4f4; 
+}
+
+/* Header Styling */
+header {
+    background: #3D52A0; /* Deep Blue */
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /*shadow for depth */
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.hamburger {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute; /* Position it absolutely inside the navbar */
+    right: 20px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #3D52A0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow: hidden;
+    width: 200px;
+    transform: translateX(100%); /* Initially off-screen */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Added opacity transition */
+}
+
+.dropdown-menu.show {
+    display: block;
+    transform: translateX(0); /* Slide in */
+    opacity: 1; /* Ensure visibility */
+}
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.dropdown-menu a:hover {
+    background-color: #FF6B6B;
+}
+
+
+.logo {
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600; /* Bold text */
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #FF6B6B;
+}
+
+/* Section Styling */
+section {
+    padding: 50px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Alternating Section Backgrounds */
+.home {
+    background-color: #3D52A0;  
+    color: #fff;  
+}
+
+.home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.home p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.products {
+    background-color: #7091E6; /* Medium Blue */
+    /* Option 2: Medium Blue */
+}
+
+.about {
+    background-color: #8697C4; /* Light Blue-Gray */
+    color: #000; /* Dark text for better readability */
+    /* Option 3: Light Blue-Gray */
+}
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.about p {
+    font-size: 1.1rem;
+    color: #fff;
+
+}
+
+.contact {
+    background-color: #ADBBDA; /* Soft Lavender */
+    color: #fff;
+    /* Option 4: Soft Lavender */
+}
+
+/* Footer */
+footer {
+    background-color: #EDE8F5; /* Pale Purple */
+    color: #3D52A0;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FF6B6B; /* Vibrant Coral */
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+
+}
+
+.cta-button:hover {
+    background-color: #E63900; /* Deep Coral */
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 50%; /* Adjust the width of the carousel */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-container .product-item {
+    flex: 0 0 100%; /* Ensures each item occupies the full width */
+    padding: 10px;
+    box-sizing: border-box;
+}
+.carousel-container .product-item img {
+    width: 100%;  /* Image fills the width of the container */
+    height: auto;  /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    max-width: 100%; /* Ensures images do not exceed the container width */
+    max-height: 300px; /* Optional: Limit the height of the images */
+    margin: 0 auto;
+    border-radius: 10px; /* Optional: Apply rounded corners to images */
+}
+/* Product Gallery */
+.product-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    min-width: 100%; /* Ensures one item takes full width */
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    color: #6B7A8F;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-item h3 {
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #6B7A8F;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7091E6;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Contact Form */
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    margin-bottom: 15px;
+}
+
+.contact-list label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #3D52A0;
+}
+
+.contact-list input, 
+.contact-list textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-list button {
+    background-color: #3D52A0;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+
+}
+
+.contact-list button:hover {
+    background-color: #7091E6;
+}
+.trading-hours {
+    margin-top: 30px;
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.trading-hours h3 {
+    font-weight: bold;
+}
+
+.trading-hours ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.trading-hours li {
+    margin-bottom: 10px;
+}
+
+.trading-hours li strong {
+    font-weight: bold;
+}
+
+.whatsapp-contact {
+    background-color: #00e677;
+    width: 60px;   /* Increase the container width if needed */
+    height: 60px;  /* Increase the container height if needed */
+    text-align: center;
+    border-radius: 50%;   /* Make it a perfect circle */
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp-icon {
+    width: 60px;  /* Set image width */
+    height: 60px; /* Set image height */
+    object-fit: contain; /* Ensure the image maintains its aspect ratio */
+}
+
+.whatsapp-button {
+    display: inline-block;
+    padding: 3px 8px; /* Smaller padding */
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    font-size: 5px; /* Smaller font size */
+    font-weight: bold;
+    border-radius: 50px; /* Fully rounded corners */
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: scale(0.9);
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E; /* Darker WhatsApp green */
+    transform: scale(0.75); /* Slight zoom effect on hover */
+}
+
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    /* Carousel adjustments */
+    .carousel {
+        max-width: 90%; /* Ensures carousel takes up most of the screen */
+    }
+
+    /* CTA button adjustments */
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    /* Product Gallery adjustments */
+    .product-gallery {
+        flex-direction: column; /* Stack items vertically on small screens */
+        gap: 10px; /* Reduced gap between items */
+    }
+
+    /* Product Item adjustment */
+    .product-item {
+        min-width: 100%; /* Ensure items stack on mobile */
+        padding: 15px; /* Adjust padding for mobile */
+    }
+
+    /* Header & Nav adjustments */
+    .navbar {
+        flex-direction: column; /* Stack items vertically in mobile view */
+        gap: 10px;
+    }
+
+    .nav a {
+        font-size: 16px; /* Reduce font size for smaller screens */
+    }
+
+    /* Footer styling */
+    footer p {
+        font-size: 12px; /* Adjust footer font size for better readability on mobile */
+    }
+    .nav-links {
+        display: none; /* Hide regular nav links */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon */
+    }
+    
+    /* When the dropdown menu is active, show it */
+    .dropdown-menu.show {
+        display: block;
+    }
+}
+
+
