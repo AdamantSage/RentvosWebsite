@@ -140,3 +140,26 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdownMenu.classList.toggle('show');
     });
 });
+
+
+//pop up for form submission
+function handleFormSubmit(event) {
+    event.preventDefault();  // Prevent default form submission behavior
+    
+    // Show loading message while form is being submitted
+    document.getElementById("loadingMessage").style.display = "block";
+
+    // Simulate form submission (since Netlify takes care of it automatically)
+    setTimeout(function() {
+        // Hide loading message
+        document.getElementById("loadingMessage").style.display = "none";
+        
+        // Show success message
+        document.getElementById("successMessage").style.display = "block";
+    }, 1000);  // Simulate a 1-second delay before showing the success message
+}
+
+function closePopup() {
+    // Hide the success message popup when 'Close' is clicked
+    document.getElementById("successMessage").style.display = "none";
+}
