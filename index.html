@@ -97,8 +97,8 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
-        <form id="contactForm" name="contact" method="POST" data-netlify="true" action="#" onsubmit="handleFormSubmit(event)">
-            <!-- Redirect to a custom Thank You page (optional, not used for popup) -->
+        <form id="contactForm" name="contact" method="POST" data-netlify="true" action="#">
+            <!-- Redirect to a custom Thank You page -->
             <input type="hidden" name="_next" value="https://yourdomain.com/thank-you">
     
             <ul class="contact-list">
@@ -127,14 +127,11 @@
                 </li>
             </ul>
         </form>
-        
-        <!-- Hidden loading and success messages -->
         <div id="loadingMessage" style="display: none;">Sending...</div>
-        <div id="successMessage" style="display: none;">
-            <p>Thank you for contacting us!</p>
-            <button onclick="closePopup()">Close</button>
-        </div>
-    
+    <div id="successMessage" style="display: none;">
+        <p>Thank you for contacting us!</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
         <div class="whatsapp-contact">
             <a href="https://wa.me/+27838825087" target="_blank" rel="noopener">
                 <img decoding="async" src="assets/images/Whats-App.png" alt="WhatsApp" class="whatsapp-icon">
