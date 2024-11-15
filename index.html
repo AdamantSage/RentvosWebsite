@@ -95,46 +95,48 @@
     </section>
 
     <!-- Contact Section -->
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form id="contactForm" action="https://formsubmit.co/michaelmathebula009@gmail.com" method="POST">
-            <ul class="contact-list">
-                <li>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Name and Surname" required>
-                </li>
-                <li>
-                    <label for="company">Company:</label>
-                    <input type="text" id="company" name="company" placeholder="Company (Optional)">
-                </li>
-                <li>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Your email" required>
-                </li>
-                <li>
-                    <label for="mobile">Mobile Number:</label>
-                    <input type="tel" id="mobile" name="mobile" placeholder="Mobile number" pattern="[0-9]{10}" title="Enter a valid 10-digit mobile number" required>
-                </li>
-                <li>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" placeholder="What would you like to say?" required></textarea>
-                </li>
-                <li>
-                    <button type="submit">Send Message</button>
-                </li>
-            </ul>
-        </form>
-        <div id="loadingMessage" style="display: none;">Sending...</div> <!-- Loading Message -->
-        <div id="successMessage" style="display: none;">Thank you for contacting us!</div> <!-- Success Message -->
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm" action="https://formsubmit.co/michaelmathebula009@gmail.com" method="POST">
+        <!-- Redirect to a custom Thank You page -->
+        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you">
 
-        <div class="whatsapp-contact">
-            
-            <a href="https://wa.me/0838825087" target="_blank" rel="noopener">
-                <img decoding="async" src="assets/images/Whats-App.png" alt="WhatsApp" class="whatsapp-icon">
-            </a>
-        </div>
-    </section>
+        <ul class="contact-list">
+            <li>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Name and Surname" required>
+            </li>
+            <li>
+                <label for="company">Company:</label>
+                <input type="text" id="company" name="company" placeholder="Company (Optional)">
+            </li>
+            <li>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+            </li>
+            <li>
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Mobile number" pattern="[0-9]{10}" title="Enter a valid 10-digit mobile number" required>
+            </li>
+            <li>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="What would you like to say?" required></textarea>
+            </li>
+            <li>
+                <button type="submit">Send Message</button>
+            </li>
+        </ul>
+    </form>
+    <div id="loadingMessage" style="display: none;">Sending...</div> <!-- Loading Message -->
+    <div id="successMessage" style="display: none;">Thank you for contacting us!</div> <!-- Success Message -->
+
+    <div class="whatsapp-contact">
+        <a href="https://wa.me/0838825087" target="_blank" rel="noopener">
+            <img decoding="async" src="assets/images/Whats-App.png" alt="WhatsApp" class="whatsapp-icon">
+        </a>
+    </div>
+</section>
+
 
     
     <!-- Footer -->
